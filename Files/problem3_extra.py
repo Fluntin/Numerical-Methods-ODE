@@ -3,6 +3,16 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 
+from scipy.integrate import odeint
+from scipy.integrate import solve_ivp
+
+import scipy.optimize as opt
+from scipy.optimize import fsolve
+from scipy.optimize import root
+from scipy.optimize import minimize
+from scipy.optimize import Bounds
+from scipy.optimize import LinearConstraint
+
 # Assume that I have several points to test.
 
 # I define my initial conditions

@@ -31,7 +31,7 @@ xn = 1   # Ending point for x
 n = 3  # Number of steps
 
 # Initial conditions to explore
-initial_conditions = [1e-308, 1e-10, -1e-10, -1e-308]
+initial_conditions = [1e-308, 1e-10, 0, -1e-10, -1e-308]
 
 # Plotting
 plt.figure(figsize=(10, 6))

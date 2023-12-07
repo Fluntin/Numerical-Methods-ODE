@@ -10,8 +10,8 @@ def derivative(y):
 # Initial values
 step_size = 1
 epsilon = 0.00000001
-start = -10
-end = 10
+start = -5
+end = 5
 
 # Arrays
 time_points = np.arange(start, end, step_size)

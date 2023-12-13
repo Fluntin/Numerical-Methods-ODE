@@ -9,8 +9,8 @@ def derivative(y):
 
 # Initial values
 step_size = 1
-epsilon = 0.00000001
-start = -5
+epsilon = 0.000000001
+start = -1
 end = 5
 
 # Arrays

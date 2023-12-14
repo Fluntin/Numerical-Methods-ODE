@@ -70,7 +70,7 @@ def plot_results(u0, v0, tmax, n):
         u_rk, v_rk = runge_kutta_step(u_rk, v_rk, t, dt)
         allt.append(t)
         error_euler.append(abs(u_euler - u_exact))
-        error_rk.append(abs(u_rk - u_exact))
+        error_rk.append((u_rk - u_exact))
         exact_values.append(u_exact)
         euler_values.append(u_euler)
         rk_values.append(u_rk)
@@ -85,8 +85,8 @@ def plot_results(u0, v0, tmax, n):
     plt.ylabel("Error")
     plt.xlabel("t")
 
-    plt.plot(allt, error_euler, 'tab:orange', label="Euler", linewidth=2)
-    #plt.plot(allt, error_rk, 'b', label="Runge-Kutta", linewidth=2)
+    #plt.plot(allt, error_euler, 'tab:orange', label="Euler", linewidth=2)
+    plt.plot(allt, error_rk, 'b', label="Runge-Kutta", linewidth=2)
 
     plt.legend(loc='upper right')
     plt.grid(True)
@@ -97,8 +97,8 @@ def plot_results(u0, v0, tmax, n):
     plt.ylabel("y(t)")
     plt.xlabel("t")
 
-    plt.plot(allt, euler_values, 'tab:orange', label="Euler", linewidth=2)
-    #plt.plot(allt, rk_values, 'b', label="Runge-Kutta", linewidth=2)
+    #plt.plot(allt, euler_values, 'tab:orange', label="Euler", linewidth=2)
+    plt.plot(allt, rk_values, 'b', label="Runge-Kutta", linewidth=2)
     plt.plot(allt, exact_values, 'purple', label="Exact", linewidth=2)
 
     plt.legend(loc='upper right')
